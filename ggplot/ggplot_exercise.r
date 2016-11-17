@@ -13,6 +13,8 @@ suicides <- suicides %>%
   group_by(year, age, sex) %>% 
   mutate(deaths = sum(deaths))
 
+ggplot(data = suicides, mapping = aes(x = year, y = deaths))
+
 #  Make a line plot of suicides by age
 # (year on the x axis, deaths on the y axis, different line for each age).
 # facet by sex.
